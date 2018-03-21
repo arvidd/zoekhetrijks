@@ -1,0 +1,25 @@
+<div *ngIf="loading">
+  <mat-spinner style="margin:auto"></mat-spinner>
+</div>
+<div *ngIf="details">
+  <div fxLayout="row">
+    <div fxFlex>
+      <div>
+        <em>
+        {{details.artObject.label.title}} {{details.artObject.label.makerLine}}
+      </em>
+      </div>
+      <div>
+        {{details.artObject.label.description}}
+      </div>
+    </div>
+    <div fxFlex="33%" *ngIf="details.artObject.webImage">
+      <div style="position: relative">
+        <img [src]="details.artObject.webImage.url" style="max-width: 100%">
+      </div>
+    </div>
+  </div>
+  <div>
+    <small>{{details.artObject.acquisition.creditLine}}</small>
+  </div>
+</div>

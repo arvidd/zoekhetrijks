@@ -1,0 +1,11 @@
+<mat-card class="half-width-search">
+  <mat-card-title>Doorzoek het Rijksmuseum</mat-card-title>
+  <mat-card-content>
+    <div fxLayout="row">
+      <mat-form-field fxFlex>
+        <input matInput type="text" placeholder="Zoek" #searchField (keyup.enter)="search(searchField)"/>
+      </mat-form-field>
+      <button mat-raised-button color='primary' (click)="search(searchField)" class="force-button-height">Zoek</button>
+    </div>
+  </mat-card-content>
+</mat-card>
